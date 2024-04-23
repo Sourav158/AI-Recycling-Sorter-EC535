@@ -1,0 +1,13 @@
+Welcome to the networking-enabled EC535 Stock Image v1.0!
+
+This stock package includes many additional tools and utilities
+compared to the ones you've used previously. 
+
+You may use this stock image for assignments where configuring
+the kernel, the rootfs, and/or busybox are NOT part of the main
+goals. If you have any questions, please contact your
+instructor or TA.
+
+Have fun!
+
+-- EC535 Teaching Staff
