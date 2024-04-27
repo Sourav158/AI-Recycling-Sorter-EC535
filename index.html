@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Classifier</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function classifyImage() {
+  $.get('/classify', function(data) {
+    const result = JSON.parse(data);
+    if (result.error) {
+      alert('Error: ' + result.error);
+    } else {
+      $('#image').attr('src', '/' + result.filename);  
+      $('#label').text('Classification: ' + result.label);
+    }
+  });
+}
+</script>
+</head>
+<body>
+<button onclick="classifyImage()">Classify Image</button>
+<img id="image" src="" alt="Image will appear here after classification." style="max-width:100%; height:auto;">
+<div id="label"></div>
+</body>
+</html>
